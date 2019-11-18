@@ -322,7 +322,6 @@ class Panda(object):
         else:
             pos = nx.drawing.layout.bipartite_layout(g, set(links['tf_index']))
         #nx.draw_networkx(g, pos, labels=labels, node_size=40, font_size=3, alpha=0.3, linewidth = 0.5, width =0.5)
-        print(plot_bipart)
         if not plot_bipart:
             colors=range(len(edges))
         else:
