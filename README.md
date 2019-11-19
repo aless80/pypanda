@@ -10,7 +10,7 @@ NaN values in normalized matrices are replaced with values normalized by the ove
 * [Installation](#installation)  
 * [Usage](#usage)  
   * [Run from terminal](#run-from-terminal)
-  * [Run from python](#run-from-python)
+  * [Run from Python](#run-from-python)
 * [Toy data](#toy-data)
 * [Results](#results)
 
@@ -61,7 +61,7 @@ Hamming distance is calculated every iteration.
 
 
 ## Installation
-PyPanda runs on Python 2.7. You can either run the pypanda script directly (see [Usage](#usage)) or install it on your system. We recommend the following commands to install pypandas on UNIX systems:
+PyPanda runs on **Python 2.7**<sup>[*](#footnote)</sup>. You can either run the pypanda script directly (see [Usage](#usage)) or install it on your system. We recommend the following commands to install pypandas on UNIX systems:
 #### Using  a virtual environment
 Using [python virtual environments](http://docs.python-guide.org/en/latest/dev/virtualenvs/) is the cleanest installation method. 
 
@@ -89,7 +89,7 @@ rm -rf pypandaenv
 ```
 
 #### Using pip 
-Never use ~~sudo pip~~. Instead you can use pip on the user's install directory:
+Never use ~~sudo pip~~. Instead you can use pip for Python 2.7 in the user's install directory:
 ```no-highlight
 git clone https://github.com/aless80/pypanda.git
 cd pypanda
@@ -101,10 +101,12 @@ echo "$(pwd):PATH" >> ~/.bashrc
 source ~/.bashrc
 ```
 
+Uninstall pypanda:
+
 ```no-highlight
 pip uninstall pypanda
 ```
-To run pypanda from Windows (tested on Windows 10) install Git (https://git-scm.com/downloads) and Anaconda Python2.7 (https://www.continuum.io/downloads) and from the Anaconda prompt run:
+To run pypanda from Windows (tested on Windows 10) install Git (https://git-scm.com/downloads) and Anaconda Python 2.7 (https://www.continuum.io/downloads) and from the Anaconda prompt run:
 ```no-highlight
 git clone https://github.com/aless80/pypanda.git
 cd pypanda
@@ -143,8 +145,8 @@ python run_puma.py -e ./ToyData/ToyExpressionData.txt -m ./ToyData/ToyMotifData.
 ```
 For pypuma see also [PyPuma](https://github.com/aless80/pypuma#installation). 
 
-#### Run from python
-Fire up your python shell or ipython notebook. Use the python installation in the virtual environment if you installed pypanda there. 
+#### Run from Python
+Fire up your Python 2.7 shell or ipython notebook. Use the python installation in the virtual environment if you installed pypanda there. 
 
 Import the classes in the pypanda library:
 ```python
@@ -217,3 +219,6 @@ Sample1 Sample2 Sample3 Sample4
 
 TF, Gene and Motif order is identical to the panda output file.
 ```
+
+### <a name="footnote">Note</a>
+Python 3.4 is not yet supported but most of the code should also work there
